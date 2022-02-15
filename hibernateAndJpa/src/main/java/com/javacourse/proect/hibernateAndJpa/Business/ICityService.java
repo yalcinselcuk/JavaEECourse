@@ -5,8 +5,7 @@ import java.util.List;
 import com.javacourse.proect.hibernateAndJpa.Entities.City;
 
 public interface ICityService {
-	
-	
+
 	List<City> getAll();
 
 	void add(City city);
@@ -14,4 +13,6 @@ public interface ICityService {
 	void update(City city);
 
 	void delete(City city);
+
+	City getById(int id);
 }

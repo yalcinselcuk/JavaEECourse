@@ -3,22 +3,22 @@ package com.javacourse.proect.hibernateAndJpa.Entities;
 import javax.persistence.*;
 
 @Entity
-@Table(name="city")
+@Table(name = "city")
 public class City {
-	
+
 	@Id
-	@Column(name="ID")
+	@Column(name = "ID")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	@Column(name="name")
+	@Column(name = "name")
 	private String name;
-	@Column(name="countryCode")
+	@Column(name = "countrycode")
 	private String countryCode;
-	@Column(name="district")
+	@Column(name = "district")
 	private String district;
-	@Column(name="population")
+	@Column(name = "population")
 	private int population;
-	
+
 	public City(int id, String name, String countryCode, String district, int population) {
 		super();
 		this.id = id;
@@ -27,8 +27,9 @@ public class City {
 		this.district = district;
 		this.population = population;
 	}
+
 	public City() {
-		
+
 	}
 
 	public int getId() {
@@ -70,8 +71,5 @@ public class City {
 	public void setPopulation(int population) {
 		this.population = population;
 	}
-	
-	
-	
-	
+
 }
