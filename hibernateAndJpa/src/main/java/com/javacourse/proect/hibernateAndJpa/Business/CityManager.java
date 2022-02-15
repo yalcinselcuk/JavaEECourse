@@ -5,10 +5,12 @@ import java.util.List;
 import org.springframework.transaction.annotation.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.javacourse.proect.hibernateAndJpa.DataAccess.ICityDal;
 import com.javacourse.proect.hibernateAndJpa.Entities.City;
 
+@Service
 public class CityManager implements ICityService {
 
 	private ICityDal cityDal;
@@ -21,23 +23,25 @@ public class CityManager implements ICityService {
 	@Override
 	@Transactional
 	public List<City> getAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.cityDal.getAll();
 	}
 
 	@Override
+	@Transactional
 	public void add(City city) {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
+	@Transactional
 	public void update(City city) {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
+	@Transactional
 	public void delete(City city) {
 		// TODO Auto-generated method stub
 

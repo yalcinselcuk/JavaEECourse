@@ -2,7 +2,7 @@ package com.javacourse.proect.hibernateAndJpa.Entities;
 
 import javax.persistence.*;
 
-
+@Entity
 @Table(name="city")
 public class City {
 	
@@ -26,6 +26,9 @@ public class City {
 		this.countryCode = countryCode;
 		this.district = district;
 		this.population = population;
+	}
+	public City() {
+		
 	}
 
 	public int getId() {
